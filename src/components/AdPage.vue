@@ -1,20 +1,57 @@
 <template>
   <div class="hero">
-    <div id="full-size">
-      <div class="topbanner">
-        <b-img :src="images.topbanner" fluid alt="Responsive image" style="width:100%"/>
+    <div class="all_images">
+      <div class="topbanner"> 
+        <b-img :src="images.topbanner" fluid alt="Responsive image" style="width:100%" />
       </div>
       <div>
-        <div :background="bodybanner1" fluid="" alt="Responsive image" style="background-image: url(&quot;static/img/자동차랜딩페이지2.cc9645c.png&quot;);width: 100%;height: 300px;float: left;">
-      <form style="
-          position: relative;
-          left: 800px;
-          top: 75px;
-          width: 750px;
-          height: 300px;
-      ">
-      <div class="row contract"><div class="col-sm-3">계약: </div>
-      <div class="col-sm-3"><select id="usertypes" required="required" aria-required="true" class="form-control custom-select"><option value="">Select One</option><option value="개인">개인</option><option value="법인사업자">법인사업자</option><option value="개인사업자">개인사업자</option></select></div></div> <div class="row counselling"><div class="col-sm-3">상담구분: </div> <div class="col-sm-3"><select id="cartypes" required="required" aria-required="true" class="form-control custom-select"><option value="">Select One</option><option value="신차">신차</option><option value="장기렌터카">장기렌터카</option><option value="리스">리스</option></select></div></div> <div class="row field"><div class="col-sm-3">성명: </div> <div class="col-sm-9"><input type="text" name="name" required="required" class="input"></div></div> <div class="row field"><div class="col-sm-3">연락처: </div> <div class="col-sm-9"><input type="text" name="contact" required="required" class="input"></div></div> <div class="row submit"><div class="col"><button type="submit" class="btn my-2 my-sm-0 btn-outline-success">제출</button></div></div> <hr></form>
+        <div :background="bodybanner1" fluid="" alt="Responsive image" style="background-repeat: no-repeat; background-size:cover; background-image: url(&quot;static/img/자동차랜딩페이지2.cc9645c.png&quot;);width: 100%;height: 550px;float: left;">
+          <form style="
+              position: relative;
+              left: 1320px;
+              top: 200px;
+              width: 750px;
+              height: 300px;
+          ">
+            <div class="row contract" ><div class="col-sm-3">계약: </div> 
+              <div class="col-sm-3">
+                <select id="usertypes" required="required" aria-required="true" class="form-control custom-select">
+                  <option value="">Select One</option>
+                    <option value="개인">개인</option>
+                    <option value="법인사업자">법인사업자</option>
+                    <option value="개인사업자">개인사업자</option>
+                </select>
+              </div>
+            </div> 
+            <div class="row counselling">
+              <div class="col-sm-3">상담구분: </div> 
+                <div class="col-sm-3">
+                  <select id="cartypes" required="required" aria-required="true" class="form-control custom-select">
+                    <option value="">Select One</option>
+                    <option value="신차">신차</option>
+                    <option value="장기렌터카">장기렌터카</option>
+                    <option value="리스">리스</option>
+                  </select>
+                 </div>
+            </div>
+            <div class="row field">
+              <div class="col-sm-3">성명: </div>
+              <div class="col-sm-9">
+                <input type="text" name="name" required="required" class="input">
+              </div>
+            </div>
+            <div class="row field">
+              <div class="col-sm-3">연락처: </div> 
+                <div class="col-sm-9">
+                  <input type="text" name="contact" required="required" class="input">
+                </div>
+            </div> 
+            <div class="row submit">
+              <div class="col">
+                <button type="submit" class="btn my-2 my-sm-0 btn-outline-success">제출</button>
+              </div>
+            </div>
+       </form>
 
       </div>
       </div>
@@ -116,11 +153,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.hero {
+/* .hero {
     height: 200vh;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
+    justify-content: center;
   }
   .hero .display-3 {
     text-align: center;
@@ -136,6 +173,12 @@ export default {
     font-size: 1.0rem;
     text-align: left;
     padding-left: 465pt;
+  } */
+  .all_images{
+    /* max-height:100%;
+    max-width:100%;
+    object-fit: contain; */
+    overflow:auto; /* or overflow:auto; if you want scrollbars */
   }
   
   .submit {
@@ -178,12 +221,6 @@ export default {
     left: 250px;
     top: 10px;
   }
-
-  #full-size{
-  height:100%;
-  width:100%;
-  overflow:auto; /* or overflow:auto; if you want scrollbars */
-}
 
 .hero .bodybanner1 {
   background-image: url('../components/assets/자동차랜딩페이지2.png');
